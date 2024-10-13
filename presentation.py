@@ -187,7 +187,7 @@ class Presentation(Slide, ThreeDScene):
         blist = BulletedList(
             "Why/How do you see the apple?",
             "Why is the apple red?",
-        )
+        ).scale(0.8)
         blist.to_edge(UP)
         blist.to_edge(LEFT)
         self.play(
@@ -228,8 +228,11 @@ class Presentation(Slide, ThreeDScene):
         )
         ax.to_edge(LEFT)
         graph = ax.plot(lambda x: np.sin(10 * x))
+        whiteLight = Text("White Light").scale(0.5).next_to(graph, UP)
+
         self.play(
             Create(graph),
+            Write(whiteLight),
             run_time = 1.5
         )
         self.next_slide()
@@ -249,6 +252,7 @@ class Presentation(Slide, ThreeDScene):
         graph4.set_color(BLUE)
         arrow = Arrow(start = ax.get_right(), end = ax2.get_left())
         arrow.set_color(WHITE)
+        multipleFreq = Text("An Aggregate of Multiple Frequencies").scale(0.47).next_to(graph3, UP)
         self.play(
             Create(arrow),
             run_time = 1.5
@@ -257,12 +261,14 @@ class Presentation(Slide, ThreeDScene):
             Create(graph2),
             Create(graph3),
             Create(graph4),
+            Write(multipleFreq),
             run_time = 1.5
         )
         self.next_slide()
         self.play(
             FadeOut(arrow),
             FadeOut(graph),
+            FadeOut(multipleFreq)
         )
         graph2.generate_target()
         graph3.generate_target()
@@ -270,8 +276,11 @@ class Presentation(Slide, ThreeDScene):
         graph2.target.to_edge(LEFT)
         graph3.target.to_edge(LEFT)
         graph4.target.to_edge(LEFT)
+        whiteLight.generate_target()
+        whiteLight.target.move_to(graph3.target.get_center() + UP*1.5)
 
         self.play(
+            MoveToTarget(whiteLight),
             MoveToTarget(graph2),
             MoveToTarget(graph3),
             MoveToTarget(graph4),
@@ -291,8 +300,12 @@ class Presentation(Slide, ThreeDScene):
         graph5.generate_target()
         graph5.target.shift(LEFT*3)
         graph5.move_to(graph5.target)
+
+        albedo = Text("Albedo(colour) of the surface").scale(0.5).next_to(graph5, UP*3)
+
         self.play(
             Create(graph5),
+            Write(albedo),
             run_time = 1
         )
         self.next_slide()
@@ -365,6 +378,46 @@ class Presentation(Slide, ThreeDScene):
             rays[31].animate.set_color(RED),
             run_time = 1
         )
+        self.next_slide()
+        self.play(
+            *[FadeOut(mob)for mob in self.mobjects]
+        )
+        title = Title("The Raytracing Algorithm")
+        title.to_edge(UP)
+        self.play(
+            Write(title),
+            run_time = .5
+        )
+        self.next_slide()
+        firstItem = Tex("1. All rays will begin from the camera.").scale(0.8).next_to(title, DOWN).to_edge(LEFT)
+        self.play(
+            Write(firstItem),
+            run_time = 1.5  
+        )
+        self.next_slide()
+        secondItem = Tex("2. The ray will bounce around within the scene, until it hits a light source.").scale(0.8).next_to(firstItem, DOWN).to_edge(LEFT)
+        self.play(
+            Write(secondItem),
+            run_time = 1.5
+        )
+        self.next_slide()
+        thirdItem = Tex("3. The colour of the ray is determined by the colour of the light source and the objects hit along the way.").scale(0.8).next_to(secondItem, DOWN).to_edge(LEFT)
+        self.next_slide()
+        self.play(
+            Write(thirdItem),
+            run_time = 1.5
+        )
+        self.next_slide()
+        self.play(
+            *[FadeOut(mob)for mob in self.mobjects]
+        )
+        title = Title("What I did in my EPQ")
+        title.move_to(ORIGIN)
+        self.play(
+            Write(title),
+            run_time = 1.5
+        )
+
 
     def cast_bouncing_ray(self, origin, direction, walls, max_length, bounces_left):
         """ Cast a ray that can bounce off walls. """

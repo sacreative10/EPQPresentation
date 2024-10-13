@@ -22,3 +22,9 @@ Why is it you can see what is on the screen?
 - If no light enters your eye, you see nothing.
 - Light "rays" must always begin from light sources.
 - Light rays transmit information by bouncing off objects [and change their frequency/colour accordingly].
+
+# What I Did as part of my EPQ
+- RGBA Colour Model
+- Object-ray intersection
+- Reflections (Metal / Lambertian)
+- Shadows (key detail)
