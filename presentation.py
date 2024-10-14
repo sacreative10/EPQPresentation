@@ -474,9 +474,35 @@ class Presentation(Slide, ThreeDScene):
         )
 
         self.next_slide()
+        R.generate_target()
+        G.generate_target()
+        B.generate_target()
+        A.generate_target()
+        ed.generate_target()
+        reen.generate_target()
+        lue.generate_target()
+        lpha.generate_target()
+        R.target.move_to(UP*3 + LEFT*7)
+        G.target.move_to(UP*1 + LEFT*7)
+        B.target.move_to(DOWN*1 + LEFT*7)
+        A.target.move_to(DOWN*3 + LEFT*7)
+        ed.target.next_to(R.target, RIGHT*0.5)
+        reen.target.next_to(G.target, RIGHT*0.5)
+        lue.target.next_to(B.target, RIGHT*0.5)
+        lpha.target.next_to(A.target, RIGHT*0.5)
+
         self.play(
-            *[FadeOut(mob)for mob in self.mobjects]
+            MoveToTarget(R),
+            MoveToTarget(G),
+            MoveToTarget(B),
+            MoveToTarget(A),
+            MoveToTarget(ed),
+            MoveToTarget(reen),
+            MoveToTarget(lue),
+            MoveToTarget(lpha),
+            run_time = 1
         )
+
         square = Square(side_length=2).set_fill(RED, 1)
         square.set_color(RED)  # Set initial color to red
         square.move_to(UP * 2)  # Move square upwards
@@ -524,7 +550,27 @@ class Presentation(Slide, ThreeDScene):
             lag_ratio = 0.1
         )
         )
-        
+
+        self.next_slide()
+        self.play(
+            FadeOut(square),
+            FadeOut(red_slider),
+            FadeOut(green_slider),
+            FadeOut(blue_slider),
+        )
+        blendedColor = Tex(r"$\text{Blended Color} \Rightarrow$").scale(1).move_to(UP*2)
+        blendedColor.set_color(WHITE)
+        blendedColorDesc = Tex(r"$\text{Color_1} \times \text{Color_2}$").scale(1).next_to(blendedColor, DOWN + RIGHT)
+        blendedColorDesc.set_color(WHITE)
+        self.play(
+            Write(blendedColor),
+            run_time = 1
+        )
+        self.next_slide()
+        self.play(
+            Write(blendedColorDesc),
+            run_time = 1
+        )
 
 
 
