@@ -1,0 +1,492 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Manim Slides</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/black.min.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/zenburn.min.css">
+
+    <!-- <link rel="stylesheet" href="index.css"> -->
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides"><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/212977187009115781706d5872181ea72e0f8fdd646ff7c26b55c5e4631ec533.mp4"
+              data-background-video-muted
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/006658fcc16c3437cf47c2afefde00a62be2d429ce7d2e0948505895c5426e5e.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/b5a328d9b6f2035c9be50d219e57c821c24306142c547219bc3b0b69937bacbf.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/526e6c0e105b3b0ab5c095ad4b6a60209a1222599f34ac4f9c87762f87a1961f.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/b8f6c645f1784be2c7bfab01b92366c6587f6113b37121baadde371f92f933ed.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/e68a86909e467461796f30a437373da043280749bbb100967adebc5aa88ca28f.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/dc5fb841cb0f958236429fc7dbf51c2021655e4f3ec35ca83cf5569ff32b659b.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/bc4e1358af95bc70defc6d0073c1bc6338f855dbbffc6c2f0253d1f0e7d957f0.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/3eef34ba016e96d8a58534508095bdf4a3b51e0db7d5813bb8c6b9fae8e39845.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/f570eb26f302dc5c522a248a076cfad5d97896c0b67d49694be54a807b3a54c8.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/7ca7588bfe3e21abdbb550a4eb5ea20af21880b9f56ebd96250c56731f9e5f52.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/e94ba5856769b1b01860c602bbadc3fd2dccb3ac7f8b5de00ddd004026a8230c.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/af2b5dac098bb9e0cbbc67928679f469c5de948fa18172cb9e51dd3f5f92760d.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/f5dc69da6ee6708073f12dc16f78dbd81be9436f5765602be3fe404da6495630.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/b0f05bfcd6ecc5f19c5041460fd74a5e3e2f09a4228e7326cfdfdc3f30a7f751.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/28b8e768f7ee1e8dbbeca1b6f918f2d9172a9bf80d4c16c8fc7bb4f9108f1499.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/726141224395f1a00eb0189acdc44b821b6dba47cb4a022301807721c580e04b.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/9804230b7841d8ae5b86ace0e888a06b3f5de5c2c8cbe7237c74d5d1247156f0.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/c3b5fce64fd26dee1cf7379542589e7780cb233bdfc5396622a4cf44b9967c48.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/a987e73d882a4013f66f68a58cab254e4574b1fbd566b81bb36eb038a7923701.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/7cdb0ad277943fb0b22b26398b11dbbc077d8d563f5778d2729ccc8e6655812b.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/c0be7e8375b6b397cd86dd84a5fe322bcb4fe2a393e839bf4f355785f0693865.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/a3db55fabf0503f121b54d28cde2ca3fd5b4e934de6dbc2c2551a303b90ae06c.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/cc2f7ccf50bb869c0be08351aeaa892d89fc837504488742c3060223c2b0d096.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/3046b07974e84a467536cc258c71af9076e693b2eee76f5325d94f24459beca6.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/73ca1d9c78a87f51419a8bf5e61bae4dec2b0fb44f43294908d0c7f1c244e27a.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/5f558176584e99c18a29e4ca447ee91746bcfb94a5913e7705920376b4cf05ce.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/486ad427732f5801085f1024129babdcfb3e63eb51157aae8fb98834a84b0858.mp4"
+              
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="Presentation_assets/251ef2f6a72c3de2f2eae52af273ad25d8b8c6e4a7b5932d2318e1b5ff4037a2.mp4"
+              
+              >
+              
+            </section></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+
+    <!-- To include plugins, see: https://revealjs.com/plugins/ -->
+
+    <!-- <script src="index.js"></script> -->
+    <script>
+      Reveal.initialize({
+        
+        // The "normal" size of the presentation, aspect ratio will
+        // be preserved when the presentation is scaled to fit different
+        // resolutions. Can be specified using percentage units.
+        width: '100%',
+        height: '100%',
+
+        // Factor of the display size that should remain empty around
+        // the content
+        margin: 0.04,
+
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+        maxScale: 2.0,
+
+        // Display presentation control arrows
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: false,
+
+        // Display the page number of the current slide
+        // - true:    Show slide number
+        // - false:   Hide slide number
+        //
+        // Can optionally be set as a string that specifies the number formatting:
+        // - "h.v":   Horizontal . vertical slide number (default)
+        // - "h/v":   Horizontal / vertical slide number
+        // - "c":   Flattened slide number
+        // - "c/t":   Flattened slide number / total slides
+        //
+        // Alternatively, you can provide a function that returns the slide
+        // number for the current slide. The function should take in a slide
+        // object and return an array with one string [slideNumber] or
+        // three strings [n1,delimiter,n2]. See #formatSlideNumber().
+        slideNumber: false,
+
+        // Can be used to limit the contexts in which the slide number appears
+        // - "all":      Always show the slide number
+        // - "print":    Only when printing to PDF
+        // - "speaker":  Only in the speaker view
+        showSlideNumber: 'all',
+
+        // Use 1 based indexing for # links to match slide number (default is zero
+        // based)
+        hashOneBasedIndex: false,
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: false,
+
+        // Push each slide change to the browser history.  Implies `hash: true`
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Optional function that blocks keyboard events when retuning false
+        //
+        // If you set this to 'focused', we will only capture keyboard events
+        // for embedded decks when they are in focus
+        keyboardCondition: null,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // Changes the behavior of our navigation directions.
+        //
+        // "default"
+        // Left/right arrow keys step between horizontal slides, up/down
+        // arrow keys step between vertical slides. Space key steps through
+        // all slides (both horizontal and vertical).
+        //
+        // "linear"
+        // Removes the up/down arrows. Left/right arrows step through all
+        // slides (both horizontal and vertical).
+        //
+        // "grid"
+        // When this is enabled, stepping left/right from a vertical stack
+        // to an adjacent vertical stack will land you at the same vertical
+        // index.
+        //
+        // Consider a deck with six slides ordered in two vertical stacks:
+        // 1.1    2.1
+        // 1.2    2.2
+        // 1.3    2.3
+        //
+        // If you're on slide 1.3 and navigate right, you will normally move
+        // from 1.3 -> 2.1. If "grid" is used, the same navigation takes you
+        // from 1.3 -> 2.3.
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the question-mark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autolaying embedded media (video/audio/iframe)
+        // - null:   Media will only autoplay if data-autoplay is present
+        // - true:   All media will autoplay, regardless of individual setting
+        // - false:  No media will autoplay, regardless of individual setting
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes
+        // - null:   Iframes with data-src AND data-preload will be loaded when within
+        //           the viewDistance, iframes with only data-src will be loaded when visible
+        // - true:   All iframes with data-src will be loaded when within the viewDistance
+        // - false:  All iframes with data-src will be loaded only when visible
+        preloadIframes: null,
+
+        // Can be used to globally disable auto-animation
+        autoAnimate: true,
+
+        // Optionally provide a custom element matcher that will be
+        // used to dictate which elements we can animate between.
+        autoAnimateMatcher: null,
+
+        // Default settings for our auto-animate transitions, can be
+        // overridden per-slide or per-element via data arguments
+        autoAnimateEasing: 'ease',
+        autoAnimateDuration: 1.0,
+        autoAnimateUnmatched: true,
+
+        // CSS properties that can be auto-animated. Position & scale
+        // is matched separately so there's no need to include styles
+        // like top/right/bottom/left, width/height or margin.
+        autoAnimateStyles: ['opacity', 'color', 'background-color', 'padding', 'font-size', 'line-height', 'letter-spacing', 'border-width', 'border-color', 'border-radius', 'outline', 'outline-offset'],
+
+        // Controls automatic progression to the next slide
+        // - 0:      Auto-sliding only happens if the data-autoslide HTML attribute
+        //           is present on the current slide or fragment
+        // - 1+:     All slides will progress automatically at the given interval
+        // - false:  No auto-sliding, even if data-autoslide is present
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding (defaults to navigateNext)
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // Opens links in an iframe preview overlay
+        // Add `data-preview-link` and `data-preview-link="false"` to customize each link
+        // individually
+        previewLinks: false,
+
+        // Exposes the reveal.js API through window.postMessage
+        postMessage: true,
+
+        // Dispatches all reveal.js events to the parent window through postMessage
+        postMessageEvents: false,
+
+        // Focuses body when page changes visibility to ensure keyboard shortcuts work
+        focusBodyOnPageVisibilityChange: true,
+
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+
+        // The maximum number of pages a single slide can expand onto when printing
+        // to PDF, unlimited by default
+        pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+
+        // Prints each fragment on a separate slide
+        pdfSeparateFragments: true,
+
+        // Offset used to reduce the height of content within exported PDF pages.
+        // This exists to account for environment differences based on how you
+        // print to PDF. CLI printing options, like phantomjs and wkpdf, can end
+        // on precisely the total height of the document whereas in-browser
+        // printing has to end one pixel before.
+        pdfPageHeightOffset: -1,
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000
+      });
+
+      
+    </script>
+
+    
+  </body>
+</html>

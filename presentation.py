@@ -5,6 +5,10 @@ from manim_slides import *
 
 config.assets_dir = "assets"
 config.frame_rate = 120
+config.frame_width = 16
+config.frame_height = 9
+config.pixel_width = 1920
+config.pixel_height = 1080
 
 
 class NumberedList():
@@ -386,7 +390,7 @@ class Presentation(Slide, ThreeDScene):
         title.to_edge(UP)
         self.play(
             Write(title),
-            run_time = .5
+            run_time = 1
         )
         self.next_slide()
         firstItem = Tex("1. All rays will begin from the camera.").scale(0.8).next_to(title, DOWN).to_edge(LEFT)
