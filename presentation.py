@@ -116,7 +116,7 @@ class Presentation(Slide, ThreeDScene):
         )
 
         self.next_slide()
-        question = Tex("What is the fundamental property of the monitor, which allows you to see what's on it?").scale(0.5)
+        question = Tex("What is the fundamental property of the monitor, which allows you to see what's on it?").scale(0.65)
         question.to_edge(UP)
         question.to_edge(LEFT)
         self.play(
@@ -147,7 +147,7 @@ class Presentation(Slide, ThreeDScene):
             *[FadeOut(mob)for mob in self.mobjects]
         )
         # Key Takeaway number 1
-        title = Title(f"Key Takeaways")
+        title = Title(f"Key Lemmas")
         title.to_edge(UP)
         self.play(
             Write(title),
@@ -256,7 +256,7 @@ class Presentation(Slide, ThreeDScene):
         graph4.set_color(BLUE)
         arrow = Arrow(start = ax.get_right(), end = ax2.get_left())
         arrow.set_color(WHITE)
-        multipleFreq = Text("An Aggregate of Multiple Frequencies").scale(0.47).next_to(graph3, UP)
+        multipleFreq = Text("An Aggregate of Multiple Frequencies").scale(0.4).next_to(graph3, UP)
         self.play(
             Create(arrow),
             run_time = 1.5
@@ -302,7 +302,7 @@ class Presentation(Slide, ThreeDScene):
         graph5 = ax2.plot(lambda x: np.sin(10 * x))
         graph5.set_color(RED)
         graph5.generate_target()
-        graph5.target.shift(LEFT*3)
+        graph5.target.shift(LEFT*4)
         graph5.move_to(graph5.target)
 
         albedo = Text("Albedo(colour) of the surface").scale(0.5).next_to(graph5, UP*3)
@@ -421,7 +421,132 @@ class Presentation(Slide, ThreeDScene):
             Write(title),
             run_time = 1.5
         )
+        self.next_slide()
+        self.play(
+            *[FadeOut(mob)for mob in self.mobjects]
+        )
+        flouresentSPD = SVGMobject("fluorescent-spd.svg").scale(2)
+        graphDesc = Text("Spectral Power Distribution of a Fluorescent Light").scale(0.2).next_to(flouresentSPD, DOWN)
+        xAxis = Text("Wavelength (nm)").scale(0.2).next_to(flouresentSPD, DOWN*0.5)
+        yAxis = Text("Intensity").scale(0.2).next_to(flouresentSPD, LEFT*0.3).rotate(PI/2)
 
+        SlideTitle = Text("Spectral Power Distribution")
+        SlideTitle.to_edge(UP)
+        self.play(
+            Write(SlideTitle),
+            run_time = 1
+        )
+        
+        self.play(
+            Create(flouresentSPD),
+            # Write(graphDesc),
+            Write(xAxis),
+            Write(yAxis),
+            run_time = 2
+        )
+
+        self.next_slide()
+        # RGBA 
+        self.play(
+            *[FadeOut(mob)for mob in self.mobjects]
+        )
+        R = Text("R").scale(3).move_to(LEFT*6).set_color(RED)
+        G = Text("G").scale(3).move_to(LEFT*2).set_color(GREEN)
+        B = Text("B").scale(3).move_to(RIGHT*2).set_color(BLUE)
+        A = Text("A").scale(3).move_to(RIGHT*6).set_color(WHITE)
+        self.play(
+            Write(R),
+            Write(G),
+            Write(B),
+            Write(A),
+            run_time = 2
+        )
+        ed = Text("ed").scale(1).next_to(R, RIGHT*0.5).set_color(RED)
+        reen = Text("reen").scale(1).next_to(G, RIGHT*0.5).set_color(GREEN)
+        lue = Text("lue").scale(1).next_to(B, RIGHT*0.5).set_color(BLUE)
+        lpha = Text("lpha").scale(1).next_to(A, RIGHT*0.5).set_color(WHITE)
+        self.play(
+            Write(ed),
+            Write(reen),
+            Write(lue),
+            Write(lpha),
+            run_time = 1
+        )
+
+        self.next_slide()
+        self.play(
+            *[FadeOut(mob)for mob in self.mobjects]
+        )
+        square = Square(side_length=2).set_fill(RED, 1)
+        square.set_color(RED)  # Set initial color to red
+        square.move_to(UP * 2)  # Move square upwards
+        self.play(Create(square), run_time = 1)
+
+        # Create ValueTrackers for RGB components
+        red_tracker = ValueTracker(1)  # Red starts at 1 (full red)
+        green_tracker = ValueTracker(0)  # Green starts at 0 (no green)
+        blue_tracker = ValueTracker(0)  # Blue starts at 0 (no blue)
+
+        # Define sliders for RGB values
+        red_slider = self.create_slider(color=RED, tracker=red_tracker, position=DOWN * 1, name="RED")
+        green_slider = self.create_slider(color=GREEN, tracker=green_tracker, position=DOWN * 2, name="GREEN")
+        blue_slider = self.create_slider(color=BLUE, tracker=blue_tracker, position=DOWN * 3, name="BLUE")
+
+        # Add sliders to the scene
+        self.play(
+            Create(red_slider), Create(green_slider), Create(blue_slider), run_time = 1)
+
+        # Define the update function for the square's color
+        def update_square_color(square):
+            red_value = float(red_tracker.get_value())
+            green_value = float(green_tracker.get_value())
+            blue_value = float(blue_tracker.get_value())
+            square.set_color(ManimColor([red_value, green_value, blue_value]))
+            square.set_fill(ManimColor([red_value, green_value, blue_value]))
+
+        # Add updater to change color dynamically
+        square.add_updater(update_square_color)
+
+        # Animate the RGB sliders and their corresponding color change
+        self.play(LaggedStart(
+            red_tracker.animate.set_value(0),  # Fade out red
+            green_tracker.animate.set_value(1),  # Fade in green
+            blue_tracker.animate.set_value(1),  # Fade in blue
+            run_time = 5,
+            lag_ratio = 0.1
+        )
+        )
+        self.play(LaggedStart(
+            red_tracker.animate.set_value(1),  # Fade out red
+            green_tracker.animate.set_value(0.5),  # Fade in green
+            blue_tracker.animate.set_value(0.7),  # Fade in blue
+            run_time = 5,
+            lag_ratio = 0.1
+        )
+        )
+        
+
+
+
+    def create_slider(self, color, tracker, position, name=None):
+        """Create a horizontal slider for RGB value."""
+        # Base line for the slider
+        line = Line(start=LEFT, end=RIGHT, color=WHITE, stroke_width=4)
+        line.set_width(4)  # Set width of the slider
+
+        # Indicator for the slider (the dot)
+        dot = Dot(color=color)
+        dot.scale(1.2)
+        dot.add_updater(lambda m: m.move_to(line.point_from_proportion(tracker.get_value())))
+
+        # Group slider components (line and dot)
+        slider = VGroup(line, dot)
+        slider.move_to(position)  # Position the slider
+
+        # Label for the slider color
+        label = Text(f"{name.capitalize()}", font_size=24).next_to(slider, LEFT)
+
+        return VGroup(slider, label)
 
     def cast_bouncing_ray(self, origin, direction, walls, max_length, bounces_left):
         """ Cast a ray that can bounce off walls. """
