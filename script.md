@@ -28,3 +28,5 @@ Why is it you can see what is on the screen?
 - Object-ray intersection
 - Reflections (Metal / Lambertian)
 - Shadows (key detail)
+
+# Evaluation
