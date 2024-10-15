@@ -581,6 +581,15 @@ class Presentation(Slide, ThreeDScene):
         self.play(
             *[FadeOut(mob)for mob in self.mobjects]
         )
+        checkeredImage = ImageMobject("checkered.png")
+        self.play(
+            FadeIn(checkeredImage),
+            run_time = 1
+        )
+        self.next_slide()
+        self.play(
+            FadeOut(checkeredImage),
+        )
           # Step 1: Visualizing individual objects (e.g., small circles)
         obj1 = Circle(radius=0.5, color=BLUE).shift(LEFT * 4)
         obj2 = Circle(radius=0.5, color=GREEN).shift(LEFT * 1.5)
@@ -764,14 +773,94 @@ class Presentation(Slide, ThreeDScene):
             Write(title),
         )
         self.next_slide()
-        title.generate_target()
-        title.target.to_edge(UP)
+        chess = ImageMobject("Chess1920x1080.png")
         self.play(
-            MoveToTarget(title),
+            FadeIn(chess),
             run_time = 1
         )
-        
-        
+        self.next_slide()
+        dragon = ImageMobject("Dragon1920x1080.png")
+        self.play(
+            Transform(chess, dragon),
+            run_time = 1
+        )
+        self.next_slide()
+        self.play(
+            Transform(dragon, checkeredImage),
+            run_time = 1
+        )
+        teapot = ImageMobject("teapotcornellbox19201080.png")
+        self.play(
+            Transform(checkeredImage, teapot),
+            run_time = 1
+        )
+        self.next_slide()
+        self.play(
+            *[FadeOut(mob)for mob in self.mobjects]
+        )
+        surface = Line(DOWN*3 + LEFT*3,DOWN*3 + RIGHT*3)
+        surface.set_color(GREEN)
+
+        lightbulb = SVGMobject("lightbulb.svg").scale(0.5).move_to(UP*3 + RIGHT*3)
+        lightbulb.rotate(PI)
+
+        self.play(
+            Create(lightbulb),
+            Create(surface),
+            run_time = 1.5
+        )
+        incomingRay = Arrow(LEFT*4 + UP*3, surface.get_center(), buff=0)
+        incomingRay.set_color(YELLOW)
+        self.play(
+            Create(incomingRay),
+            run_time = 1
+        )
+        # equal reflections
+        self.next_slide()
+        equalChanceArrows = VGroup(
+            Arrow(surface.get_center(), UP + RIGHT*2, buff=0),
+            Arrow(surface.get_center(), UP + LEFT*2, buff=0),
+            Arrow(surface.get_center(), UP + RIGHT*1.5, buff=0),
+            Arrow(surface.get_center(), UP + LEFT*1.5, buff=0),
+            Arrow(surface.get_center(), UP + RIGHT*0.5, buff=0),
+            Arrow(surface.get_center(), UP + LEFT*0.5, buff=0),
+        )
+        equalChanceArrows.set_color(WHITE)
+        self.play(
+            Create(equalChanceArrows),
+            run_time = 1
+        )
+        self.next_slide()
+        # BRDFS
+        brdf = Text("BRDFs").scale(1.5)
+        brdf.move_to(ORIGIN + UP*2)
+        self.play(
+            Write(brdf),
+            run_time = 1
+        )
+        self.next_slide()
+        arrow = Arrow(start = surface.get_center(), end = lightbulb.get_center() + DOWN + LEFT*0.5, buff=0)
+        arrow.set_color(YELLOW)
+        # transform the arrows vgroup to the arrow
+        self.play(
+            Transform(equalChanceArrows, arrow),
+            run_time = 1
+        )
+        self.next_slide()
+        self.play(
+            *[FadeOut(mob)for mob in self.mobjects]
+        )
+        title = Title("Thank you for listening")
+        title.move_to(ORIGIN)
+        self.play(
+            Write(title),
+            run_time = 1
+        )
+        self.next_slide()
+        self.play(
+            *[FadeOut(mob)for mob in self.mobjects]
+        )
+
 
 
 
