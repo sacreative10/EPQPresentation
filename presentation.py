@@ -672,88 +672,88 @@ class Presentation(Slide, ThreeDScene):
         self.play(Write(root_label), Write(parent1_label), Write(parent2_label))
         self.play(Write(leaf_label1), Write(leaf_label2), Write(leaf_label3), Write(leaf_label4))
 
-        self.next_slide()
-               # Step 1: Setup a 3D scene and camera orientation
-        self.set_camera_orientation(phi=75 * DEGREES, theta=-45 * DEGREES)
+        # self.next_slide()
+        #        # Step 1: Setup a 3D scene and camera orientation
+        # self.set_camera_orientation(phi=75 * DEGREES, theta=-45 * DEGREES)
 
-        # Step 2: Create the root cube (the space we are partitioning)
-        root_cube = Cube(side_length=4, color=BLUE, fill_opacity=0.1)
-        self.play(Create(root_cube))
-        self.wait(1)
+        # # Step 2: Create the root cube (the space we are partitioning)
+        # root_cube = Cube(side_length=4, color=BLUE, fill_opacity=0.1)
+        # self.play(Create(root_cube))
+        # self.wait(1)
 
-        # Step 3: Add labels to the root cube
-        root_label = Text("Root Cube", font_size=24, color=BLUE).move_to([0, 0, 3])
-        self.play(Write(root_label))
-        self.wait(1)
+        # # Step 3: Add labels to the root cube
+        # root_label = Text("Root Cube", font_size=24, color=BLUE).move_to([0, 0, 3])
+        # self.play(Write(root_label))
+        # self.wait(1)
 
-        # Step 4: Subdivide the root cube into 8 smaller cubes (octants)
-        # This represents the first level of the octree
-        octants = VGroup()
-        offsets = [-1, 1]
-        for dx in offsets:
-            for dy in offsets:
-                for dz in offsets:
-                    octant = Cube(side_length=2, fill_opacity=0.2).shift([dx, dy, dz])
-                    octants.add(octant)
+        # # Step 4: Subdivide the root cube into 8 smaller cubes (octants)
+        # # This represents the first level of the octree
+        # octants = VGroup()
+        # offsets = [-1, 1]
+        # for dx in offsets:
+        #     for dy in offsets:
+        #         for dz in offsets:
+        #             octant = Cube(side_length=2, fill_opacity=0.2).shift([dx, dy, dz])
+        #             octants.add(octant)
 
-        self.play(Create(octants))
-        self.wait(2)
+        # self.play(Create(octants))
+        # self.wait(2)
 
-        # Step 5: Highlight the octants with different colors for clarity
-        octant_colors = [RED, GREEN, YELLOW, ORANGE, PINK, PURPLE, TEAL, GOLD]
-        for i, octant in enumerate(octants):
-            self.play(octant.animate.set_color(octant_colors[i]))
-            self.wait(0.5)
+        # # Step 5: Highlight the octants with different colors for clarity
+        # octant_colors = [RED, GREEN, YELLOW, ORANGE, PINK, PURPLE, TEAL, GOLD]
+        # for i, octant in enumerate(octants):
+        #     self.play(octant.animate.set_color(octant_colors[i]))
+        #     self.wait(0.5)
 
-        # Step 6: Add labels to the octants to explain the subdivision
-        octant_labels = VGroup(
-            Text("Octant 1", font_size=16).next_to(octants[0], UP),
-            Text("Octant 2", font_size=16).next_to(octants[1], UP),
-            Text("Octant 3", font_size=16).next_to(octants[2], UP),
-            Text("Octant 4", font_size=16).next_to(octants[3], UP),
-            Text("Octant 5", font_size=16).next_to(octants[4], DOWN),
-            Text("Octant 6", font_size=16).next_to(octants[5], DOWN),
-            Text("Octant 7", font_size=16).next_to(octants[6], DOWN),
-            Text("Octant 8", font_size=16).next_to(octants[7], DOWN),
-        )
-        self.play(Write(octant_labels))
-        self.wait(2)
+        # # Step 6: Add labels to the octants to explain the subdivision
+        # octant_labels = VGroup(
+        #     Text("Octant 1", font_size=16).next_to(octants[0], UP),
+        #     Text("Octant 2", font_size=16).next_to(octants[1], UP),
+        #     Text("Octant 3", font_size=16).next_to(octants[2], UP),
+        #     Text("Octant 4", font_size=16).next_to(octants[3], UP),
+        #     Text("Octant 5", font_size=16).next_to(octants[4], DOWN),
+        #     Text("Octant 6", font_size=16).next_to(octants[5], DOWN),
+        #     Text("Octant 7", font_size=16).next_to(octants[6], DOWN),
+        #     Text("Octant 8", font_size=16).next_to(octants[7], DOWN),
+        # )
+        # self.play(Write(octant_labels))
+        # self.wait(2)
 
-        # Step 7: Highlight the recursive subdivision of one octant (e.g., Octant 1)
-        self.play(octants[0].animate.scale(1.2).set_color(YELLOW), run_time=2)
-        self.wait(1)
+        # # Step 7: Highlight the recursive subdivision of one octant (e.g., Octant 1)
+        # self.play(octants[0].animate.scale(1.2).set_color(YELLOW), run_time=2)
+        # self.wait(1)
 
-        # Subdivide Octant 1 further into 8 smaller cubes
-        small_octants = VGroup()
-        for dx in offsets:
-            for dy in offsets:
-                for dz in offsets:
-                    small_octant = Cube(side_length=1, fill_opacity=0.3).shift([dx - 1, dy - 1, dz - 1])
-                    small_octants.add(small_octant)
+        # # Subdivide Octant 1 further into 8 smaller cubes
+        # small_octants = VGroup()
+        # for dx in offsets:
+        #     for dy in offsets:
+        #         for dz in offsets:
+        #             small_octant = Cube(side_length=1, fill_opacity=0.3).shift([dx - 1, dy - 1, dz - 1])
+        #             small_octants.add(small_octant)
 
-        self.play(Create(small_octants), run_time=2)
-        self.wait(2)
+        # self.play(Create(small_octants), run_time=2)
+        # self.wait(2)
 
-        # Step 8: Highlight octree traversal (optional)
-        traversal_arrow = Arrow3D(start=[0, 0, 0], end=[-1, -1, -1], color=YELLOW)
-        self.play(Create(traversal_arrow))
-        self.wait(1)
+        # # Step 8: Highlight octree traversal (optional)
+        # traversal_arrow = Arrow3D(start=[0, 0, 0], end=[-1, -1, -1], color=YELLOW)
+        # self.play(Create(traversal_arrow))
+        # self.wait(1)
 
-        # Highlight traversal to a specific smaller cube (small octant under Octant 1)
-        self.play(small_octants[0].animate.set_color(RED))
-        self.wait(2)
+        # # Highlight traversal to a specific smaller cube (small octant under Octant 1)
+        # self.play(small_octants[0].animate.set_color(RED))
+        # self.wait(2)
 
-        # Step 9: Reset scene (optional, to show new traversal or go back to original cube)
-        self.play(
-            FadeOut(traversal_arrow),
-            FadeOut(small_octants),
-            octants[0].animate.scale(1 / 1.2).set_color(octant_colors[0])
-        )
-        self.wait(1)
+        # # Step 9: Reset scene (optional, to show new traversal or go back to original cube)
+        # self.play(
+        #     FadeOut(traversal_arrow),
+        #     FadeOut(small_octants),
+        #     octants[0].animate.scale(1 / 1.2).set_color(octant_colors[0])
+        # )
+        # self.wait(1)
 
-        # Step 10: Final scene cleanup
-        self.play(FadeOut(octants), FadeOut(root_cube), FadeOut(root_label), FadeOut(octant_labels))
-        self.wait(2)
+        # # Step 10: Final scene cleanup
+        # self.play(FadeOut(octants), FadeOut(root_cube), FadeOut(root_label), FadeOut(octant_labels))
+        # self.wait(2)
         self.next_slide()
         self.play(
             *[FadeOut(mob)for mob in self.mobjects]
